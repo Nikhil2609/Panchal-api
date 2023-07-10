@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "compile": "npx tsc",
+    "start": "npm run compile && node dist/index.js",
     "build": "npm run build"
   },
   "author": "",
