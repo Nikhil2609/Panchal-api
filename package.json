@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build",
     "compile": "npx tsc",
     "start": "npm run compile && node dist/index.js"
   },
