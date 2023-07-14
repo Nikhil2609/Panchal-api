@@ -15,14 +15,15 @@ app.use(cors({ origin: '*' }));
 testDbConnection();
 
 app.get('/', async (req, res) => {
-
-    const userList = await User.findAll({ where: { name: "Akshay" }, raw: true });
-    console.log("Userlist===>>>", userList)
-    res.send(`Hello World Node js `)
+    const data = {
+        error: "error object"
+    }
+    res.send(data)
 });
 
-app.get('/user', (req, res) => {
-    res.send("Hello Users")
+app.get('/user', async (req, res) => {
+    const userList = await User.findAll({ where: { name: "Akshay" }, raw: true });
+    res.send(userList);
 });
 
 app.get('*', function (req, res) {
