@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/user', async (req, res) => {
-    const userList = await User.findAll({ where: { name: "Akshay" }, raw: true });
+    const userList = await User.findAll({ raw: true });
     res.send(userList);
 });
 
